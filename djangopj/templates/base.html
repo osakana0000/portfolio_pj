@@ -1,0 +1,49 @@
+<!doctype html>
+{% load bootstrap4 %}  {% bootstrap_css %}  {% bootstrap_javascript jquery='slim' %}
+{% load static %}
+<html lang="ja">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/schedule.css' %}">
+    <script src="https://kit.fontawesome.com/22f0cfa09f.js" crossorigin="anonymous"></script>
+    {% block extrahead %}{% endblock %}
+    <title>{% block title %}ダミー{% endblock %}</title>
+</head>
+<body>
+<div class="container-fluid bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark">
+        <a href="{% url 'schedule:index' %}" class="navbar-brand font-weight-bold"><i class="fas fa-tasks fa-fw"></i>タスク・リソース管理App</a>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navmenu1"
+                aria-controls="navmenu1"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu1">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{% url 'schedule:schedule_list' %}"><i
+                        class="far fa-calendar-alt fa-fw"></i>タスク</a>
+                <a class="nav-item nav-link" href="{% url 'schedule:info_list' %}"><i
+                        class="fas fa-info-circle fa-fw"></i>お知らせ</a>
+                <a class="nav-item nav-link" href="{% url 'schedule:note_list' %}"><i
+                        class="far fa-comment-alt fa-fw"></i>みんなのメモ</a>
+                <a class="nav-item nav-link" href="{% url 'schedule:sc_list' %}"><i class="fas fa-box-open fa-fw"></i>在庫持ち出し</a>
+                <a class="nav-item nav-link" href="{% url 'schedule:product_list' %}"><i class="fas fa-boxes fa-fw"></i>在庫状況</a>
+                <a class="nav-item nav-link" href="{% url 'schedule:company_list' %}"><i
+                        class="far fa-building fa-fw"></i>会社</a>
+                <a class="nav-item nav-link" href="{% url 'schedule:person_list' %}"><i class="fas fa-users fa-fw"></i>メンバー</a>
+            </div>
+        </div>
+    </nav>
+</div>
+{% block content %}<p>ダミー</p>{% endblock %}
+<div class="container">
+    <a class="mt-2 mb-5 btn btn-outline-dark btn-sm" href="/" role="button">osakana0000.site</a>
+</div>
+</body>
+</html>
