@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="css/style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <style>
+      body {
+        font-family: "Lobster", cursive;
+        font-family: "Noto Sans JP", sans-serif;
+        /* background-color: #44617b; */
+        background-color: #3d5e87;
+      }
+      .btn,
+      .content {
+        background-color: #ffffff18;
+        color: #dfd7d7;
+      }
+      .message {
+        background-color: #00000046;
+      }
+      a {
+        :width: ;
+        color: #dfd7d7;
+        text-decoration: none;
+      }
+      #rock {
+        background-color: brown;
+      }
+      #scissors {
+        background-color: rgb(179, 157, 38);
+      }
+      #paper {
+        background-color: rgb(19, 89, 194);
+      }
+      #cpu {
+        background-color: rgb(200, 82, 23);
+      }
+    </style>
     <title>じゃんけん！</title>
-</head>
-<body>
-<div class="container py-5 px-5 my-5 bg-light rounded">
-    <div class="container-fluid">
-        <div class="row">
-            <h1 class="container">じゃんけん！</h1>
-            <div class="container border rounded">
-                <p id="counterMsg">ボタンを選んでスタート！</p>
-                <p id="message">じゃん．．．けん．．．</p>
+  </head>
+  <body>
+    <div class="container my-3">
+      <div class="row my-1 px-1">
+        <div class="col-md-8 offset-md-2 p-3 mb-3 text-center shadow rounded content">
+          <h3 class="mb-3">じゃんけん!</h3>
+          <div class="message shadow rounded pb-2 pt-3">
+            <p id="count">0戦目！　0勝0敗中！</p>
+            <p id="fig">ボタンを選んでスタート！</p>
+            <p><b id="message">じゃん．．．けん．．．</b></p>
+          </div>
+          <div class="row my-2 px-1">
+            <div class="col-md-6 p-2">
+              <div class="w-100 btn rounded shadow pt-2 my-1" id="rock">グー</div>
             </div>
-            <button class="col btn btn-danger m-2" id="rock">グー</button>
-            <button class="col btn btn-warning m-2" id="scissors">チョキ</button>
-            <button class="col btn btn-primary m-2" id="paper">パー</button>
-            <button class="col btn btn-dark m-2" id="cpu">ランダム</button>
-            <!-- <button class="col btn btn-dark m-2" id="reset">初期化する</button> -->
+            <div class="col-md-6 p-2">
+              <div class="w-100 btn rounded shadow pt-2 my-1" id="scissors">チョキ</div>
+            </div>
+            <div class="col-md-6 p-2">
+              <div class="w-100 btn rounded shadow pt-2 my-1" id="paper">パー</div>
+            </div>
+            <div class="col-md-6 p-2">
+              <div class="w-100 btn rounded shadow pt-2 my-1" id="cpu">ランダム</div>
+            </div>
+            <div class="col-md-4 offset-md-4 p-2">
+              <div class="w-100 btn rounded shadow pt-2 my-1" id="reset">初期化する</div>
+            </div>
+          </div>
+          <div class="col">
+            <a class="btn btn-block shadow p-3" role="button" href="/"><i class="bi bi-globe-asia-australia me-1"></i>TOP</a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="container">
-    <a class="my-2 btn btn-outline-dark btn-sm" href="/" role="button">osakana0000.site</a>
-</div>
-<script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
