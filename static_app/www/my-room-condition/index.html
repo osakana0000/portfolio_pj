@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <style>
+      body {
+        font-family: "Lobster", cursive;
+        font-family: "Noto Sans JP", sans-serif;
+        /* background-color: #44617b; */
+        background-color: #3d5e87;
+      }
+      .btn,
+      .content {
+        background-color: #ffffff18;
+        color: #dfd7d7;
+      }
+      .message {
+        background-color: #00000046;
+      }
+      a {
+        :width: ;
+        color: #dfd7d7;
+        text-decoration: none;
+      }
+      #rock {
+        background-color: brown;
+      }
+      #scissors {
+        background-color: rgb(179, 157, 38);
+      }
+      #paper {
+        background-color: rgb(19, 89, 194);
+      }
+      #cpu {
+        background-color: rgb(200, 82, 23);
+      }
+    </style>
+    <title>My Room Condition</title>
+  </head>
+  <body>
+    <div class="container my-3">
+      <div class="row my-1 px-1">
+        <div class="col-md-8 offset-md-2 p-3 mb-3 text-center shadow rounded content">
+          <h2 class="mb-3">My Room Condition</h2>
+          <p>Raspberry Pi Zeroに取付けたセンサーで取得した温度・湿度・気圧を表示します。</p>
+          <p><b>※このページでの表示機能は現在制作中です…</b></p>
+          <div class="message shadow rounded pb-2 pt-3">
+            <h3>現在の構成</h3>
+            <div class="">
+              <img src="index.svg" class="img-fluid" />
+            </div>
+          </div>
+
+          <div class="col px-3 py-2 my-3 text-center shadow rounded">
+            <img src="rpi.jpg" class="img-fluid" />
+            <p class="">Raspberry Pi Zero + BME280（温度・湿度・気圧センサー）</p>
+          </div>
+          <div class="col px-3 py-2 my-3 text-center shadow rounded">
+            <img src="sheet_img.png" class="img-fluid" />
+            <p class="">Google Sheets</p>
+          </div>
+          <div class="col px-3 py-2 my-2 text-center shadow rounded">
+            <img src="discord_img.png" class="img-fluid" />
+            <p class="">Discord</p>
+          </div>
+          <div class="col mt-2">
+            <a class="btn btn-block shadow p-3" role="button" href="/"><i class="bi bi-globe-asia-australia me-1"></i>TOP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
